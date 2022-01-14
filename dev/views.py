@@ -10,3 +10,11 @@ class TracebackRequest(APIView):
             file.write(str(request.headers))
 
         return Response('halloWelt')
+
+
+    def post(self, request):
+        print(request.headers)
+        with open('./dev/request.log', 'w') as file:
+            file.write(str(request.headers))
+
+        return Response('halloWelt')
