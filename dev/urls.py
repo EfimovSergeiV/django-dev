@@ -1,6 +1,7 @@
-from django.urls import path
+from django.urls import path, re_path
 from dev.views import *
 
+
 urlpatterns = [
-   path('tb/', TracebackRequest.as_view()),
+   re_path('tb/', TracebackRequest.as_view()),
 ]
